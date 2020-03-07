@@ -1,88 +1,64 @@
-body {
-  background: url("/assets/js/city-background.jpg");
+h1 {
+  visibility: visible;
 }
-.script {
-  font-family: "Seaweed Script";
-  color: #fff;
-  text-align: left;
-  font-size: 40px;
-  position: relative;
-  margin: 0;
+.h1,
+h1 {
+  font-size: 3rem !important;
 }
-
 /* .img-fluid {
   padding-left: 525px;
   margin-bottom: -150px;
 } */
-
-h1 {
+.nav-link {
+  visibility: visible;
   display: flex;
   justify-content: center;
-    -webkit-animation: color-change 3s infinite;
-    -moz-animation: color-change 3s infinite;
-    -o-animation: color-change 3s infinite;
-    -ms-animation: color-change 3s infinite;
-    animation: color-change 3s infinite;
-    visibility:visible;
+  align-items: center;
+  color: white;
+  margin: auto;
+  padding-left: -15px;
 }
 
-@-webkit-keyframes color-change {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
+.fab {
+  border-block-end-style: ridge;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@-moz-keyframes color-change {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
-}
-@-ms-keyframes color-change {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
-}
-@-o-keyframes color-change {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
-}
-@keyframes color-change {
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
-}
-
-
-
 .card {
-  padding-top:150px;
+  padding-top: 230px;
   position: fixed;
-  visibility:hidden;
+  visibility: hidden;
   top: 0;
   left: 0;
   min-width: 100%;
   min-height: 100%;
 }
 li {
-  list-style-type:none;
+  list-style-type: none;
+  margin: 1em 0;
 }
 button {
-  background-color:darkslategray;
+  background-color: orangered;
   color: white;
   font-size: 25px;
-  display:flex;
+  display: flex;
+  border-style: ridge;
+  border-width: 5px;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   visibility: visible;
-
+  padding-top: 10px;
 }
 @import url(https://fonts.googleapis.com/css?family=Arvo:700);
 @import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
-body, html {
+body,
+html {
   height: 100%;
 }
 body {
-  background-image: url("/assets/js/city-background.jpg");
+  background-image: url("/assets/img/cityscape.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -91,12 +67,9 @@ body {
 
 .shadow {
   color: #fff;
-  font-family: Arvo;
+  font-family: "LuckiestGuy", cursive;
   font-weight: bold;
-  text-shadow: -3px -3px 0 #222, 3px -3px 0 #222, -3px 3px 0 #222,
-    3px 3px 0 #222, 4px 4px 0 #fff, 5px 5px 0 #fff, 6px 6px 0 #fff,
-    7px 7px 0 #fff;
-  line-height: 0.8em;
+  line-height: 1.1em;
   letter-spacing: 0.1em;
   transform: scaleY(0.7);
   -webkit-transform: scaleY(0.7);
@@ -107,37 +80,47 @@ body {
 
 .text1 {
   font-size: 60px;
-/* }
-.container {
-  position: relative;
-  width: 50%;
 }
-
-.overlay {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background-color: #008cba;
-  overflow: hidden;
+html,
+body {
   width: 100%;
-  height: 0;
-  transition: 0.5s ease;
+  height: 100%;
+  margin: 0;
 }
 
-.container:hover .overlay {
-  bottom: 0;
+.center-outer {
+  display: table;
+  width: 100%;
   height: 100%;
 }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.center-inner {
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
-} */
+}
+
+.bubbles {
+  display: inline-block;
+  font-family: arial;
+  position: relative;
+}
+
+.bubbles h1 {
+  border-style: ridge;
+  border-width: 5px;
+  fill: orange;
+  position: relative;
+  margin: 1em 0 0;
+  font-family: "Luckiest Guy", cursive;
+  color: #fff;
+  z-index: 2;
+}
+
+.individual-bubble {
+  position: absolute;
+  border-radius: 100%;
+  bottom: 10px;
+  background-color: #fff;
+  z-index: 1;
+}
