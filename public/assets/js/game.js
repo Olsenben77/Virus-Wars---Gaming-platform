@@ -418,8 +418,8 @@ class playGame extends Phaser.Scene{
         }, this);
 
         // recycling buildings
-        this.buildingGroup.getChildren().forEach(function(bacteria){
-            if(bacteria.x < - bacteria.displayWidth){
+        this.buildingGroup.getChildren().forEach(function(building){
+            if(building.x < - building.displayWidth){
                 let rightmostBuilding = this.getRightmostBuilding();
                 building.x = rightmostBuilding + Phaser.Math.Between(100, 350);
                 building.y = game.config.height + Phaser.Math.Between(0, 100);
