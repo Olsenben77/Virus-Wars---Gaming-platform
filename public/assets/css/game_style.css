@@ -39,6 +39,9 @@ li {
   list-style-type: none;
   margin: 1em 0;
 }
+.btn-danger {
+  visibility: visible;
+}
 button {
   background-color: orangered;
   color: white;
