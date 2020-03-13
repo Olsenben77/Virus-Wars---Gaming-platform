@@ -10,6 +10,7 @@
 "use strict";
 
 let game;
+let score = 0;
 
 // global game options
 let gameOptions = {
@@ -58,8 +59,8 @@ window.onload = function() {
   // object containing configuration options
   let gameConfig = {
     type: Phaser.AUTO,
-    width: 1200,
-    height: 475,
+    width: 1000,
+    height: 750,
     scene: [preloadGame, playGame],
     backgroundColor: 0x0c88c7,
 
@@ -81,7 +82,6 @@ class preloadGame extends Phaser.Scene {
   }
   preload() {
     this.load.image(`platform`, `/assets/img/platform.png`);
-    // this.load.image(`city`, `./img/cityscape.jpg`);
 
     // player is a sprite sheet made by 24x48 pixels
     this.load.spritesheet(`player`, `/assets/img/player.png`, {
@@ -103,8 +103,8 @@ class preloadGame extends Phaser.Scene {
 
     // buildings are a sprite sheet made by 512x512 pixels
     this.load.spritesheet(`building`, `/assets/img/buildings.png`, {
-      frameWidth: 512,
-      frameHeight: 512
+      frameWidth: 510,
+      frameHeight: 510
     });
   }
   create() {
@@ -148,15 +148,9 @@ class preloadGame extends Phaser.Scene {
 class playGame extends Phaser.Scene {
   constructor() {
     super(`PlayGame`);
-    this.score = 0;
     // this.gameover = false;
   }
   create() {
-    //  The score
-    this.scoreText = this.add.text(16, 16, `score: 0`, {
-      fontSize: `32px`,
-      fill: `#000`
-    });
 
     // group with all active buildings.
     this.buildingGroup = this.add.group();
@@ -251,8 +245,6 @@ class playGame extends Phaser.Scene {
       this
     );
 
-    this.physics.add.collider(this.player, this.pill, collectPill, null, this);
-
     // setting collisions between the player and the pill group
     this.physics.add.overlap(
       this.player,
@@ -268,6 +260,7 @@ class playGame extends Phaser.Scene {
           onComplete: function() {
             this.pillGroup.killAndHide(pill);
             this.pillGroup.remove(pill);
+            collectPill();
           }
         });
       },
@@ -290,7 +283,8 @@ class playGame extends Phaser.Scene {
       this
     );
 
-    this.physics.add.collider(this.player, this.pill, Gameover, null, this);
+    this.physics.add.collider(this.player, this.bacteria, Gameover, null, this);
+    this.physics.add.collider(this.player, this.pill, collectPill, null, this);
 
     // checking for input
     this.input.on(`pointerdown`, this.jump, this);
@@ -429,7 +423,7 @@ class playGame extends Phaser.Scene {
   update() {
     // game over
     if (this.player.y > game.config.height) {
-      this.scene.start(`PlayGame`);
+      Gameover();
     }
     // else if(this.gameover){
     //   return;
@@ -528,19 +522,20 @@ function resize() {
 }
 
 function collectPill() {
-  pill.disableBody(true, true);
-
   //  Add and update the score
-  this.score += 100;
-  this.scoreText.setText(`Score: ` + this.score);
-  console.log(`Score: ` + this.score);
+  score++;
+  $(`#coinCollected`).text(score);
+  console.log(score);
 }
 
 // This functions is our score screen. This game is ended if pills collected or player runs out of lives.
 function Gameover() {
-  this.physics.pause();
-  gameOver = true;
   console.log(`gameover`);
+  // $.post(`/highscore`, score, function(data) {
+  //   console.log(data);
+    // Redirect player to the leader board Screen
+    window.location = `/highscore/`;
+  // });
 
   // const user = document.getElementById("user").value;
   // var endTime = new Date();
