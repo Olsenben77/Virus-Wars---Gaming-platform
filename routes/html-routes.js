@@ -10,4 +10,10 @@ module.exports = app => {
   app.get(`/controller`, (req, res) => {
     res.render(`controller`, { style: `game_style.css` });
   });
+  app.get(`/game`, (req, res) => {
+    res.render(`game`, { style: `game_style.css` });
+  });
+  app.get(`/name`, (req, res) => {
+    res.render(`name`, { style: `game_style.css` });
+  });
 };

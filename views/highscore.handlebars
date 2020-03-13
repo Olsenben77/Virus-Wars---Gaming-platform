@@ -14,25 +14,13 @@
 
     <div class="col-sm-8">
 
-        {{!-- This code run when there is user score --}}
-        {{#if finalScore.bestTime}}
-        <div class="outset"><br>
-            <h2>{{finalScore.name}}, your best time is <font color="gold">{{finalScore.bestTime}}</font>s</h2>
-            <h2>Coins Collected: <font color="gold">{{finalScore.treasurePoint}}</font>
-            </h2>
-            <h2>Monsters Killed: <font color="gold">{{finalScore.monstersKilled}}</font>
-            </h2>
-        </div><br>
-        {{/if}}
-
         <h1 id="leaderboard-title" align="center"><u>Leaderboard</u></h1>
         <table class="table table-light">
             <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Pills</th>
-                    <th scope="col">Time</th>
+                    <th scope="col">Score</th>
                 </tr>
             </thead>
 
