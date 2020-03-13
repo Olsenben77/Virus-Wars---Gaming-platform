@@ -3,12 +3,8 @@ h1 {
 }
 .h1,
 h1 {
-  font-size: 3rem !important;
+  font-size: 4rem !important;
 }
-/* .img-fluid {
-  padding-left: 525px;
-  margin-bottom: -150px;
-} */
 .nav-link {
   visibility: visible;
   display: flex;
@@ -17,6 +13,15 @@ h1 {
   color: white;
   margin: auto;
   padding-left: -15px;
+}
+.form-control {
+  margin-top: 10px !important;
+  margin-left: 430px !important;
+  height: 100px !important;
+  font-size: 20px !important;
+}
+.input-group {
+  padding-top: 10px;
 }
 
 .fab {
@@ -27,7 +32,7 @@ h1 {
   align-items: center;
 }
 .card {
-  padding-top: 230px;
+  padding-top: 165px;
   position: fixed;
   visibility: hidden;
   top: 0;
@@ -42,9 +47,15 @@ li {
 .btn-danger {
   visibility: visible;
 }
+a {
+  color: white !important;
+}
+element.style {
+  width: 700px !important;
+  height: 367.691px;
+}
 button {
   background-color: orangered;
-  color: white;
   font-size: 25px;
   display: flex;
   border-style: ridge;
@@ -66,6 +77,16 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  visibility: visible;
+}
+.img-fluid {
+  visibility: visible;
+  max-width: 1000px !important;
+}
+p {
+  visibility: visible;
+  color: white;
+  font-size: 3rem;
 }
 
 .shadow {
@@ -95,29 +116,30 @@ body {
   display: table;
   width: 100%;
   height: 100%;
+  visibility: visible;
 }
 
 .center-inner {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  visibility: visible;
 }
 
 .bubbles {
   display: inline-block;
   font-family: arial;
   position: relative;
+  visibility: visible;
 }
 
 .bubbles h1 {
-  border-style: ridge;
-  border-width: 5px;
-  fill: orange;
   position: relative;
   margin: 1em 0 0;
   font-family: "Luckiest Guy", cursive;
   color: #fff;
   z-index: 2;
+  visibility: visible;
 }
 
 .individual-bubble {
@@ -126,4 +148,5 @@ body {
   bottom: 10px;
   background-color: #fff;
   z-index: 1;
+  visibility: visible;
 }
