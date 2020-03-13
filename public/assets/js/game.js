@@ -59,7 +59,7 @@ window.onload = function() {
   let gameConfig = {
     type: Phaser.AUTO,
     width: 1200,
-    height: 500,
+    height: 475,
     scene: [preloadGame, playGame],
     backgroundColor: 0x0c88c7,
 
