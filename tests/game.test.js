@@ -58,6 +58,13 @@ describe(`play game set`, () => {
     test()
     return('gold')
     tobe.log;
-    
+
+    test(
+      test("verify if this.platformPool are values you expect to be generated" , =>
+      
+
+      )
+    )
+
     );
     console.log('game')};
