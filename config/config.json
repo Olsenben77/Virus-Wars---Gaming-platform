@@ -1,26 +1,28 @@
-{
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
-  },
-  "production": {
-    "username": "chadcd62cdk8d4kp",
-    "password": "cbpj2rosq3m4ozsk",
-    "database": "x8i76z9ke00xwl4s",
-    "host": "ou6zjjcqbi307lip.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql",
-    "operatorsAliases": false
-  }
-}
+//Code for sequelize
+
+// {
+//   "development": {
+//     "username": "root",
+//     "password": null,
+//     "database": "database_development",
+//     "host": "127.0.0.1",
+//     "dialect": "mysql",
+//     "operatorsAliases": false
+//   },
+//   "test": {
+//     "username": "root",
+//     "password": null,
+//     "database": "database_test",
+//     "host": "127.0.0.1",
+//     "dialect": "mysql",
+//     "operatorsAliases": false
+//   },
+//   "production": {
+//     "username": "chadcd62cdk8d4kp",
+//     "password": "cbpj2rosq3m4ozsk",
+//     "database": "x8i76z9ke00xwl4s",
+//     "host": "ou6zjjcqbi307lip.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+//     "dialect": "mysql",
+//     "operatorsAliases": false
+//   }
+// }
