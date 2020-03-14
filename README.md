@@ -18,19 +18,19 @@
 ## Application Interface
 
 This is the main page after the user runs "npm run start" in their server. It gives them options to see highscores, game controls, or start the game. There are also links under the title to share their experience on social media.
-![Home](assets/img/Virus-wars-main-screen-wmv)
+![Home](assets/img/mainpage.png)
 
 The highscores page shows user generated names and their best score at Virus Wars.
-![Event](img/guysevent.png)
+![Event](assets/img/highscore.png)
 
 The controls page demonstrates how to play the game
-![Pub](img/guyspub.png)
+![Pub](assets/img/controller.png)
 
 The username page prompts the user to input their name, which will trigger the database when they are done playing.
-![Dinner](img/girlsdinner.png)
+![Dinner](assets/img/username.png)
 
 The game page is the main feature of the application. User can play Virus Wars and see their score projected at the top of the screen.
-![Dinner](img/girlsdinner.png)
+![Dinner](assets/img/game.png)
 
 ## User Story
 
@@ -70,7 +70,8 @@ Project is created with:
 -Added features to the Leaderboard table such as "platforms jumped" or a flag that denotes the user's country
 -Additional obstacles within the game
 -A shooting aspect
--Possible control schema with more options
+-Possible control schema with more options -
+-We are running into problems coming up with all the tests, mostly because we got most of the game we developed from a 3rd party, and we got the impression that testing routes with sequalize was not a direction we should go. We want to keep polishing at this point but didn't want to overlook the importance of testing.
 
 ## Summary
 
