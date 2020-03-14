@@ -6,7 +6,7 @@ describe(`first set`, () => {
     console.log(`begin tests`);
   });
   afterAll(() => {
-    console.log(`end tests`);
+    console.log(`lets do this`);
     // do something
   });
   test(
@@ -28,15 +28,36 @@ describe(`first set`, () => {
   }));
 });
 
-describe(`second set`, () => {
+describe(`play game set`, () => {
   beforeEach(() => {
     // do something
     console.log(`begin tests`);
   });
   beforeAll(() => {
     // do something
-    console.log(`end tests`);
+    console.log(`lets do this`);
   });
-  test(/*...*/);
-  test(/*...*/);
-});
+  test(
+    test('veryfy if this.buildingGroup are values you expect to be generated', =>
+    this.buildingGroup(() => { return name;})
+     )
+  );
+  test(
+    test(
+      test('veryfy if this.this.platformGroup are values you expect to be generated', =>
+      this.buildingGroup(() => { return name;
+      }))));
+
+  test(test(
+    test('veryfy if this.platformGroup are values you expect to be generated', =>
+    this.buildingGroup(() => { return name;);
+  test(    )
+    test('veryfy if this.this.platformGroup are values you expect to be generated', =>
+    this.buildingGroup(() => { return name;)
+    );
+    test()
+    return('gold')
+    tobe.log;
+    
+    );
+    console.log('game')};
