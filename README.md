@@ -18,19 +18,19 @@
 ## Application Interface
 
 This is the main page after the user runs "npm run start" in their server. It gives them options to see highscores, game controls, or start the game. There are also links under the title to share their experience on social media.
-![Home](/assets/img/mainpage.png)
+![Home](public/assets/img/mainpage.png)
 
 The highscores page shows user generated names and their best score at Virus Wars.
-![highscores](/assets/img/highscore.png)
+![highscores](public/assets/img/highscore.png)
 
 The controls page demonstrates how to play the game
-![Controller](/assets/img/controller.png)
+![Controller](public/assets/img/controller.png)
 
 The username page prompts the user to input their name, which will trigger the database when they are done playing.
-![Username](/assets/img/username.png)
+![Username](public/assets/img/username.png)
 
 The game page is the main feature of the application. User can play Virus Wars and see their score projected at the top of the screen.
-![Game](/assets/img/game.png)
+![Game](public/assets/img/game.png)
 
 ## User Story
 
@@ -80,7 +80,7 @@ Project is created with:
 
 ## UML
 
-- ![UML](/assets/img/UML.png)
+- ![UML](public/assets/img/UML.png)
 
 ## Database
 
