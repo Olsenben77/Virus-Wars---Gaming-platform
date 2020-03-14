@@ -79,6 +79,7 @@ window.onload = function() {
 class preloadGame extends Phaser.Scene {
   constructor() {
     super(`PreloadGame`);
+
   }
   preload() {
     this.load.image(`platform`, `/assets/img/platform.png`);
@@ -145,13 +146,15 @@ class preloadGame extends Phaser.Scene {
     this.scene.start(`PlayGame`);
   }
 }
+
+module.exports = {};
+
 class playGame extends Phaser.Scene {
   constructor() {
     super(`PlayGame`);
     // this.gameover = false;
   }
   create() {
-
     // group with all active buildings.
     this.buildingGroup = this.add.group();
 
@@ -533,8 +536,8 @@ function Gameover() {
   console.log(`gameover`);
   // $.post(`/highscore`, score, function(data) {
   //   console.log(data);
-    // Redirect player to the leader board Screen
-    window.location = `/highscore/`;
+  // Redirect player to the leader board Screen
+  window.location = `/highscore/`;
   // });
 
   // const user = document.getElementById("user").value;
